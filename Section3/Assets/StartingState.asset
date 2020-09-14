@@ -33,3 +33,6 @@ MonoBehaviour:
 
     2. Sneak
     my way to the emergency exit.'
+  nextStates:
+  - {fileID: 11400000, guid: a85046b1104e083418a46cc0b361ae13, type: 2}
+  - {fileID: 11400000, guid: 429168f94d988ac4397f81429b6ee576, type: 2}
