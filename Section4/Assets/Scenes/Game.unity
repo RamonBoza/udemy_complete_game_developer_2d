@@ -468,9 +468,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1798221754}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadNextScene
+      - m_Target: {fileID: 1442349752}
+        m_TargetAssemblyTypeName: NumberWizard, Assembly-CSharp
+        m_MethodName: OnPressLower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1039,6 +1039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max: 1000
   min: 1
+  guessText: {fileID: 1669496712}
 --- !u!1 &1481848428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,9 +1122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1798221754}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadNextScene
+      - m_Target: {fileID: 1442349752}
+        m_TargetAssemblyTypeName: NumberWizard, Assembly-CSharp
+        m_MethodName: OnPressHigher
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
