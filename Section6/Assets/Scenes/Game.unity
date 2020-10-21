@@ -316,52 +316,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 444440b4ef2b0f949b8bf6dd7317e99f, type: 3}
---- !u!1 &1419238909 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6720649000729619637, guid: 755c7a031104eaa469bccd95df65816a, type: 3}
-  m_PrefabInstance: {fileID: 6720649000414739241}
-  m_PrefabAsset: {fileID: 0}
---- !u!60 &1419238910
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419238909}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.99, y: 0.75}
-    newSize: {x: 0.99, y: 0.75}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.4692321, y: 0.06377506}
-      - {x: 0.3619663, y: -0.0013385043}
-      - {x: 0.11855803, y: 0.1189941}
-      - {x: 0.077022456, y: 0.375}
-      - {x: -0.08889513, y: 0.37177753}
-      - {x: -0.1224532, y: 0.121777534}
-      - {x: -0.36485016, y: -0.009114802}
-      - {x: -0.488558, y: 0.0627763}
-      - {x: -0.45634824, y: -0.2482215}
-      - {x: -0.39923218, y: -0.21410766}
-      - {x: -0.13855806, y: -0.2853326}
-      - {x: -0.07567415, y: -0.375}
-      - {x: 0.0856741, y: -0.3653326}
-      - {x: 0.13260297, y: -0.2753326}
-      - {x: 0.4066854, y: -0.22633135}
-      - {x: 0.46923217, y: -0.23888862}
 --- !u!1 &1430121663
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,21 +483,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1419238910, guid: 755c7a031104eaa469bccd95df65816a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6720649000729619637, guid: 755c7a031104eaa469bccd95df65816a, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6720649000729619638, guid: 755c7a031104eaa469bccd95df65816a, type: 3}
-      propertyPath: laserPrefab
-      value: 
-      objectReference: {fileID: 4911220870503481871, guid: 612641493932146469b7978f82f6c94f, type: 3}
-    - target: {fileID: 6720649000729619638, guid: 755c7a031104eaa469bccd95df65816a, type: 3}
-      propertyPath: projectileSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6720649000729619638, guid: 755c7a031104eaa469bccd95df65816a, type: 3}
-      propertyPath: projectileFiringPeriod
-      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6720649000729619639, guid: 755c7a031104eaa469bccd95df65816a, type: 3}
       propertyPath: m_LocalPosition.x
