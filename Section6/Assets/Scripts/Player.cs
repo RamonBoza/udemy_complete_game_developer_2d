@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject laserPrefab;
     [SerializeField] private float projectileSpeed = 10f;
     [SerializeField] private float projectileFiringPeriod = 0.1f;
+    [SerializeField] private Level level;
 
     private Coroutine firingCoroutine;
     
@@ -89,6 +90,7 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            level.LoadGameOver();
         }
     }
 }
