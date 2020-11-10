@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class DefenderButton : MonoBehaviour
 {
+    [SerializeField] private Defender defenderPrefab;    
     private void OnMouseDown()
     {
         ResetAllButtons();
         this.GetComponent<SpriteRenderer>().color = Color.white;
+        FindObjectOfType<DefenderSpawner>().SetSelectedDefender(defenderPrefab);
     }
 
     private void ResetAllButtons()

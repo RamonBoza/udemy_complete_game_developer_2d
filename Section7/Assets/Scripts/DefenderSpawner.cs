@@ -9,12 +9,17 @@ using Vector2 = UnityEngine.Vector2;
 
 public class DefenderSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject defender;
+    private Defender defender;
 
     // Start is called before the first frame update
     private void OnMouseDown()
     {
         SpawnDefender(GetSquareClicked());
+    }
+
+    public void SetSelectedDefender(Defender defenderToSelect)
+    {
+        defender = defenderToSelect;
     }
 
     private Vector2 GetSquareClicked()
@@ -34,6 +39,6 @@ public class DefenderSpawner : MonoBehaviour
 
     private void SpawnDefender(Vector2 position)
     {
-        GameObject newDefender = Instantiate(defender, position, Quaternion.identity);
+        Defender newDefender = Instantiate(defender, position, Quaternion.identity);
     }
 }
