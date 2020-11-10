@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
 
 public class DefenderSpawner : MonoBehaviour
 {
@@ -11,18 +14,26 @@ public class DefenderSpawner : MonoBehaviour
     // Start is called before the first frame update
     private void OnMouseDown()
     {
-        SpawnDefender();
+        SpawnDefender(GetSquareClicked());
     }
 
     private Vector2 GetSquareClicked()
     {
         Vector2 clickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(clickPos);
-        return worldPos;
+        var gridPos = SnapToGrid(worldPos);
+        return gridPos;
     }
 
-    private void SpawnDefender()
+    private Vector2 SnapToGrid(Vector2 rawWorldPos)
     {
-        GameObject newDefender = Instantiate(defender, GetSquareClicked(), Quaternion.identity);
+        float newX = Mathf.RoundToInt(rawWorldPos.x);
+        float newY = Mathf.RoundToInt(rawWorldPos.y);
+        return new Vector2(newX,newY);
+    }
+
+    private void SpawnDefender(Vector2 position)
+    {
+        GameObject newDefender = Instantiate(defender, position, Quaternion.identity);
     }
 }
