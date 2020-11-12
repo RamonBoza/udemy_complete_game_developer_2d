@@ -14,7 +14,7 @@ public class DefenderSpawner : MonoBehaviour
     // Start is called before the first frame update
     private void OnMouseDown()
     {
-        SpawnDefender(GetSquareClicked());
+        AttemptToPlaceADefenderAt(GetSquareClicked());
     }
 
     public void SetSelectedDefender(Defender defenderToSelect)
@@ -35,6 +35,17 @@ public class DefenderSpawner : MonoBehaviour
         float newX = Mathf.RoundToInt(rawWorldPos.x);
         float newY = Mathf.RoundToInt(rawWorldPos.y);
         return new Vector2(newX,newY);
+    }
+
+    private void AttemptToPlaceADefenderAt(Vector2 gridPos)
+    {
+        var starDisplay = FindObjectOfType<StarDisplay>();
+        var defenderCost = defender.GetStarCost();
+        if (starDisplay.HaveEnoughStars(defenderCost))
+        {
+            SpawnDefender(gridPos);
+            starDisplay.SpendStars(defenderCost);
+        }
     }
 
     private void SpawnDefender(Vector2 position)
